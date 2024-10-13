@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dormitory Space Landing Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        /* Navbar and Footer animation */
+        .navbar, #footer {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Hero Section Animation */
+        .hero-section {
+            background: url('hero-background.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            animation: slideIn 2s ease forwards;
+            padding: 140px 20px;
+            background: url('dormbg.jpg') no-repeat center center/cover;
+
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .navbar {
+            transition: background-color 0.3s;
+            background-color: #ffffff; /* Base navbar color */
+            width: 100%; /* Make navbar take the full width */
+            max-width: 1200px; /* Optional: Limit max width */
+            margin: 0 auto; /* Center the navbar if using max-width */
+        }
+
+        /* Set the color for navbar links */
+        .navbar-nav .nav-link {
+            color: #007bff; /* Change this to your desired color */
+        }
+
+        /* Change color on hover */
+        .navbar-nav .nav-link:hover {
+            background-color: blue; /* Background color on hover */
+            color: #ffffff; /* Text color on hover */
+            border-radius: 5px; /* Rounded corners for hover effect */
+        }
+
+        .btn-primary {
+            transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .social-icons a {
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        .card {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer text alignment */
+        #about-us {
+            text-align: justify;
+        }
+
+        /* Custom styles to align navbar-collapse to the left */
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                left: 0; /* Aligns the navbar-collapse to the left */
+                right: auto; /* Resets the right position */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header and Navbar -->
+    <header class="position-fixed top-0 w-100">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" alt="Company Logo" class="img-fluid" style="max-height: 50px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact-us">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-primary text-white" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white">
+        <div class="container">
+            <h1 class="display-4">Welcome to Your Dormitory Space!</h1>
+            <p class="lead">Manage your stay, track attendance, and stay connected—all in one place.</p>
+        </div>
+    </section>
+
+    <!-- Room List Section -->
+    <section id="room-list" class="room-list py-5">
+        <div class="container">
+            <h2 class="mb-4 text-center">Room List</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card animate__animated animate__fadeInLeft">
+                        <img src="dorm1.jpg" alt="Dorm Room 1" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <p class="card-text">Rent Price Php. 1,500.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card animate__animated animate__fadeInUp">
+                        <img src="dorm2.jpg" alt="Dorm Room 2" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <p class="card-text">Rent Price Php. 1,500.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card animate__animated animate__fadeInRight">
+                        <img src="dorm3.jpg" alt="Dorm Room 3" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <p class="card-text">Rent Price Php. 1,500.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Dorm Life Made Simple</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card animate__animated animate__fadeInLeft">
+                        <img src="room.jpg" alt="Apply for a Room" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <h3 class="card-title">APPLY FOR A ROOM</h3>
+                            <p class="card-text">Submit your room application online, choosing from available rooms. Our system will guide you through the process, from application to approval.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card animate__animated animate__fadeInUp">
+                        <img src="room1.jpg" alt="Manage Your Stay" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <h3 class="card-title">MANAGE YOUR STAY</h3>
+                            <p class="card-text">Access your room details, make maintenance requests, and check your rent payment history—all in one place. Tailor your stay to suit your needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card animate__animated animate__fadeInRight">
+                        <img src="room2.jpg" alt="Check In/Out" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <h3 class="card-title">CHECK IN/OUT MADE EASY</h3>
+                            <p class="card-text">Seamlessly check in and out of the dormitory with our presence monitoring feature. Staff will ensure your records are updated and secure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact-us" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h4>Get in Touch</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <h4>Our Location</h4>
+                    <p>123 Dormitory Street, City, Country</p>
+                    <p>Phone: +123 456 7890</p>
+                    <p>Email: info@dormitoryspace.com</p>
+                    <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2655.0932999911765!2d121.16177851555618!3d13.949289190451044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bdf0ab88a6792b%3A0x9cd5ff0283e6a428!2sLipa%2C%20Batangas%2C%20Philippines!5e0!3m2!1sen!2sus!4v1633678988671!5m2!1sen!2sus"
+                    width="100%"
+                    height="250"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 Dormitory Space. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and FontAwesome -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script>
+        // Change navbar background on scroll
+        window.onscroll = function() {
+            const navbar = document.querySelector('.navbar');
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        };
+
+        // Collapse the navbar on link click
+        const navbarLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        navbarLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const navbarCollapse = document.getElementById('navbarNav');
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                });
+                bsCollapse.hide();
+            });
+        });
+    </script>
+</body>
+</html>
